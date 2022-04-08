@@ -4,25 +4,18 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2022/04/08/Leetcode/"/>
-    <url>/2022/04/08/Leetcode/</url>
-    
-    <content type="html"><![CDATA[<p>title Leetcode<br>tags: [算法，Leetcode]<br>categories: 算法刷题</p><h2 id="N叉树的层序遍历"><a href="#N叉树的层序遍历" class="headerlink" title="N叉树的层序遍历"></a>N叉树的层序遍历</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">levelOrder</span>(<span class="hljs-params">root</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> root:<br>            <span class="hljs-keyword">return</span> []<br>        ans = []<br>        q = [root]<br>        <span class="hljs-keyword">while</span> q:<br>            cnt = <span class="hljs-built_in">len</span>(q)<br>            level = []<br>            <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(cnt):<br>                cur = q.pop(<span class="hljs-number">0</span>)<br>                level.append(cur.val)<br>                <span class="hljs-keyword">for</span> child <span class="hljs-keyword">in</span> cur.children:<br>                    q.append(child)<br>            ans.append(level)<br>        <span class="hljs-keyword">return</span> ans<br></code></pre></td></tr></table></figure><h2 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">permute</span>(<span class="hljs-params">self, nums: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>]</span>) -&gt; <span class="hljs-type">List</span>[<span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>]]:<br>        res=[]<br>        checked=[<span class="hljs-number">0</span>]*<span class="hljs-built_in">len</span>(nums)<br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">helper</span>(<span class="hljs-params">sol,checked</span>):<br>            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">len</span>(sol)==<span class="hljs-built_in">len</span>(nums)):<br>                res.append(sol)<br>            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(nums)):<br>                <span class="hljs-keyword">if</span>(checked[i]==<span class="hljs-number">1</span>):<br>                    <span class="hljs-keyword">continue</span><br>                checked[i]=<span class="hljs-number">1</span><br>                helper(sol+[nums[i]],checked)<br>                checked[i]=<span class="hljs-number">0</span><br>        helper([],checked)<br>        <span class="hljs-keyword">return</span> res<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
+    <title>N2语法整理</title>
     <link href="/2022/04/07/N2%E8%AF%AD%E6%B3%95%E6%95%B4%E7%90%86/"/>
     <url>/2022/04/07/N2%E8%AF%AD%E6%B3%95%E6%95%B4%E7%90%86/</url>
     
     <content type="html"><![CDATA[<p><img src="https://boke-1258559374.cos.ap-beijing.myqcloud.com/img/20220407232101.png" alt="image-20220407232100934"></p><p><img src="https://boke-1258559374.cos.ap-beijing.myqcloud.com/img/20220407232051.png" alt="image-20220407232051831"></p><p><img src="https://boke-1258559374.cos.ap-beijing.myqcloud.com/img/20220407232038.png" alt="image-20220407232038114"></p><p><img src="https://boke-1258559374.cos.ap-beijing.myqcloud.com/img/20220407232007.png" alt="image-20220407232007316"></p><p><img src="https://boke-1258559374.cos.ap-beijing.myqcloud.com/img/20220407231945.png" alt="image-20220407231945773"></p><p><img src="https://boke-1258559374.cos.ap-beijing.myqcloud.com/img/20220407231859.png"></p><p><img src="https://boke-1258559374.cos.ap-beijing.myqcloud.com/img/20220407231859.png" alt="image-20220407231858985"></p><p><img src="https://boke-1258559374.cos.ap-beijing.myqcloud.com/img/20220407225529.png" alt="image-20220407225529655"></p><p><img src="https://boke-1258559374.cos.ap-beijing.myqcloud.com/img/20220407225424.png"></p>]]></content>
     
+    
+    <categories>
+      
+      <category>python</category>
+      
+    </categories>
     
     
   </entry>
@@ -40,6 +33,31 @@
     <categories>
       
       <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>原创</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Leetcode每日一题</title>
+    <link href="/2021/06/10/Leetcode/"/>
+    <url>/2021/06/10/Leetcode/</url>
+    
+    <content type="html"><![CDATA[<h2 id="N叉树的层序遍历"><a href="#N叉树的层序遍历" class="headerlink" title="N叉树的层序遍历"></a>N叉树的层序遍历</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">levelOrder</span>(<span class="hljs-params">root</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> root:<br>            <span class="hljs-keyword">return</span> []<br>        ans = []<br>        q = [root]<br>        <span class="hljs-keyword">while</span> q:<br>            cnt = <span class="hljs-built_in">len</span>(q)<br>            level = []<br>            <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(cnt):<br>                cur = q.pop(<span class="hljs-number">0</span>)<br>                level.append(cur.val)<br>                <span class="hljs-keyword">for</span> child <span class="hljs-keyword">in</span> cur.children:<br>                    q.append(child)<br>            ans.append(level)<br>        <span class="hljs-keyword">return</span> ans<br></code></pre></td></tr></table></figure><h2 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">permute</span>(<span class="hljs-params">self, nums: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>]</span>) -&gt; <span class="hljs-type">List</span>[<span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>]]:<br>        res=[]<br>        checked=[<span class="hljs-number">0</span>]*<span class="hljs-built_in">len</span>(nums)<br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">helper</span>(<span class="hljs-params">sol,checked</span>):<br>            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">len</span>(sol)==<span class="hljs-built_in">len</span>(nums)):<br>                res.append(sol)<br>            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(nums)):<br>                <span class="hljs-keyword">if</span>(checked[i]==<span class="hljs-number">1</span>):<br>                    <span class="hljs-keyword">continue</span><br>                checked[i]=<span class="hljs-number">1</span><br>                helper(sol+[nums[i]],checked)<br>                checked[i]=<span class="hljs-number">0</span><br>        helper([],checked)<br>        <span class="hljs-keyword">return</span> res<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>python</category>
       
     </categories>
     
